@@ -1,0 +1,85 @@
+
+<head>
+
+  <style>
+
+    body
+    {
+        background-image: url('<%= image_path('LOGINLAYOUT.png').to_s %>');
+        background-repeat: repeat;
+        background-attachment: fixed;"
+    }
+
+    form {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background: lavender;
+        border: 10px;
+        border: 1px solid #5b5758;
+        border-width: 1px 1px 3px;
+
+    }
+
+
+    #signup .inputs input[type=email],input[type=text],input[type=number], input[type=password] {
+
+        width: 80%;
+    }
+  </style>
+
+</head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+<div class="center" >
+  <div class="center" >
+    <div class="center" >
+<div>
+
+</div>
+</div>
+  </div>
+</div>
+
+
+<div  style="width: 40%;">
+
+  <br><br>
+  <%= image_tag("LOGO-ORANGE4.png", :size => '390x248')%>
+  <div class="login-card">
+
+    <%= form_for(:session, url: session_path) do |f| %>
+    <h2>Iniciar sesión</h2>
+    <h5></h5>
+    <br>
+
+    <span class="glyphicon glyphicon-envelope" style="padding-right: 8px" >  </span>
+      <span class="field">
+      <%= f.text_field :email, value: params[:session].try(:[], :email) %>
+
+    </span>
+
+    <br><br>
+    <span class="glyphicon glyphicon-eye-open " style="padding-right: 8px" > </span>
+
+    <span class="field">
+      <%= f.password_field :password %>
+    </span>
+        <br><br>
+        <div class="actions">
+          <%= f.submit 'Entrar' %>
+        </div>
+    <% end %>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

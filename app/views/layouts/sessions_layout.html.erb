@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Seguros</title>
+  <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"
+      bgcolor="#FFFFFF">
+
+<center>
+  <% if flash.notice %>
+      <div class="notice">
+        <%= flash.notice %>
+      </div>
+  <% end %>
+  <% if flash.alert %>
+      <div class="alert">
+        <%= flash.alert %>
+      </div>
+  <% end %>
+
+        <%= yield %>
+
+  <!-- Fin Footer principal -->
+</center>
+
+
+
+
+</body>
+</html>
+
+

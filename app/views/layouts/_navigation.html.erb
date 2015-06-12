@@ -1,0 +1,225 @@
+
+<style>
+
+    .list-group a
+    {
+        color: #c9e4c7;
+        background-color: #004050;
+
+    }
+
+    .list-group a:hover
+    {
+        color: #c9e4c7;
+        background-color: #006e89;
+
+    }
+    .list-group a:focus
+    {
+        color: #c9e4c7;
+        background-color: #006e89;
+
+    }
+
+
+
+
+</style>
+
+
+<div id="MainMenu"
+
+>
+  <div class="list-group panel" style="
+  margin-left: -20px; margin-right: -30px;
+  ">
+    <a href="<%= index_path %>" class="list-group-item list-group-item-success" >
+      <span class="glyphicon glyphicon-home"> </span> &nbsp;
+      Home
+    </a>
+
+
+
+
+    <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" >
+      <span class="glyphicon glyphicon-user"> </span> &nbsp;
+      Gestión de usuarios
+    </a>
+    <div class="collapse" id="demo3">
+      <a href="<%= new_user_path %>"
+         class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Nuevo
+      </a>
+
+      <a href="<%= users_path %>"
+         class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Listar
+        </a>
+      <a href="<%= users_path %>"
+         class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Buscar
+      </a>
+    </div>
+
+
+    <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" >
+      <span class="glyphicon glyphicon-globe"> </span> &nbsp;
+      Gestión de Empresas
+    </a>
+    <div class="collapse" id="demo4">
+      <a href="<%= new_empresa_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Nueva
+      </a>
+      <a href="<%= empresas_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Listar
+      </a>
+      <a href="<%= users_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Buscar
+      </a>
+    </div>
+
+
+    <a href="#demo5" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" >
+      <span class="glyphicon glyphicon-lock"> </span> &nbsp;
+      Gestión de Locales
+    </a>
+    <div class="collapse" id="demo5">
+      <a href="<%= new_shop_point_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>Nuevo
+      </a>
+      <a href="<%= shop_points_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Listar
+      </a>
+      <a href="<%= users_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Buscar
+      </a>
+    </div>
+
+
+    <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" >
+      <span class="glyphicon glyphicon-ok-circle"> </span> &nbsp;
+      Gestión de Productos
+    </a>
+    <div class="collapse" id="demo6">
+      <a href="<%= new_producto_vehiculo_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Vender S.Vehículo
+      </a>
+      <a href="<%= producto_vehiculos_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Ventas S.vehículos
+      </a>
+      <a href="<%= new_producto_inmueble_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Vender S.Inmueble
+      </a>
+      <a href="<%= producto_inmuebles_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Ventas S.inmuebles
+      </a>
+      <a href="<%= new_producto_persona_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Vender S.Persona
+      </a>
+      <a href="<%= producto_personas_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Ventas S.personas
+      </a>
+      <a href="<%= new_producto_tecnologium_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Vender S.Tecnologico
+      </a>
+      <a href="<%= producto_tecnologia_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Ventas S.tecnológicos
+      </a>
+
+    </div>
+
+
+
+    <a href="#demo7" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" >
+      <span class="glyphicon glyphicon-align-left"> </span> &nbsp;
+      Estadísticas
+    </a>
+    <div class="collapse" id="demo7">
+      <a href="<%= new_user_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Estadistica1
+      </a>
+      <a href="<%= new_user_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Estadistica1
+      </a>
+      <a href="<%= new_user_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Estadistica1
+      </a>
+      <a href="<%= new_user_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Estadistica1
+      </a>
+      <a href="<%= new_user_path %>" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Estadistica1
+      </a>
+    </div>
+
+
+
+    <a href="#demo8" class="list-group-item list-group-item-success"
+       data-toggle="collapse" data-parent="#MainMenu">
+      <span class="glyphicon glyphicon-search"> </span> &nbsp;
+      Buscar por parámetros
+
+    </a>
+    <div class="collapse" id="demo8">
+      <a href="" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Buscar póliza</a>
+      <a href="" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Ventas por fecha</a>
+      <a href="" class="list-group-item"><span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Ventas por vendedor </a>
+      <a href="" class="list-group-item"><span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Asegurados </a>
+    </div>
+
+    <a href="#demo11" class="list-group-item list-group-item-success"
+       data-toggle="collapse" data-parent="#MainMenu">
+      <span class="glyphicon glyphicon-file"> </span> &nbsp;
+      Gestionar productos
+
+    </a>
+    <div class="collapse" id="demo11">
+      <a href="" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Agregar nuevo</a>
+      <a href="" class="list-group-item">
+        <span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Listar todos</a>
+      <a href="" class="list-group-item"><span style="margin-left: 10px;" class="fa fa-arrow-circle-right"></span>
+        Buscar </a>
+    </div>
+
+
+
+    <a href="#demo9" class="list-group-item list-group-item-success"
+       data-toggle="collapse" data-parent="#MainMenu">Mas elementos</a>
+    <div class="collapse" id="demo9">
+      <a href="" class="list-group-item">Subitem 1asd</a>
+      <a href="" class="list-group-item">Subitem 2asd</a>
+      <a href="" class="list-group-item">Subitem 3asd</a>
+    </div>
+
+  </div>
+</div>

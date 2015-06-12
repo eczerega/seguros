@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shop_point.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @shop_point.city %>
+</p>
+
+<p>
+  <strong>Comuna:</strong>
+  <%= @shop_point.comuna %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @shop_point.rut %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @shop_point.street %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @shop_point.image %>
+</p>
+
+<%= link_to 'Edit', edit_shop_point_path(@shop_point) %> |
+<%= link_to 'Back', shop_points_path %>

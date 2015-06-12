@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seguros</title>
+  <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"
+      style="background-color: #c6c6c6">
+<center>
+  <div id="mail_frame" align="center">
+    <div style="display: none;" id="pageloading">Cargando Pagina</div>
+    <div id="main_top">
+      <div style="height:65px;">
+        <div id="top_user">
+          <a ><%= link_to "Inicio", index_path %></a> | <a ><%= link_to "Salir", session_path, method: :delete %></a>
+
+          <!-- Seleccionador de lenguaje -->
+          <span class="langbox">
+            <select class="combo" id="changeLang">
+              <option value="" selected="selected">Idioma</option>
+              <option value="en">en</option>
+              <option value="es">es</option>
+
+            </select>
+            </span>
+          <!-- Fin Seleccionador de lenguaje -->
+
+          <br>
+          Bienvenido <b><%= current_user.name %></b>
+            </div>
+                  <div id="top_logo" style="background-image: url(/assets/LOGO-ORANGE3.png);"></div>
+            </div>
+
+      <!-- Menú de selección -->
+              <div style="height:25px;" align="left">
+                <div id="top_menu">
+                  <a class="lhome">Inicio</a>
+
+                  <a  class="lwmail">Webmail</a>
+
+                  <a class="lfiles">Alguna cosa</a>
+                  <a class="lpass">Otra cosa</a>
+                  <a  class="lhelp">Ayuda</a>
+                </div>
+              </div>
+            </div>
+
+    <!-- Fin menú de selección -->
+    <div id="main_contents">
+
+      <!-- MENu izquierda -->
+      <div id="leftPanel">
+        <div class="panelBox">
+          <div class="title"><span>Resumen de cuenta</span></div>
+          <ul>
+
+            <li><span>Dato:</span> Info</li>
+            <li><span>Dato:</span> Info </li>
+
+            <li><span>Dato</span> Info  </li>
+
+
+            <li><span>Dato</span> Info </li>
+
+
+            <li><span>Dato</span> Info </li>
+
+
+            <li><span> Dato </span> Info  </li>
+
+
+            <li><span>Dato</span>Info  </li>
+
+          </ul>
+        </div>
+
+
+
+      </div>
+
+
+
+
+        <!-- Pagina principal -->
+      <div id="rightPanel">
+        <%= yield %>
+        </div>
+
+      </div>
+
+
+
+      <div class="cleft"></div><div class="cright"></div><div class="cf"></div>
+
+    </div>
+
+    <!-- Footer principal -->
+    <div id="main_bottom">
+         <a class="white" >
+         </a>
+      2015 
+        </div>
+    </div>
+  <!-- Fin Footer principal -->
+</center>
+
+
+
+
+</body>
+</html>

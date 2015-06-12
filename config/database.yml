@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+
+  adapter: postgresql
+  encoding: unicode
+  database: seguros_version8_desarrollo
+  pool: 5
+  username:
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: seguros_version8_desarrollo
+  pool: 5
+  username:
+  password:
+
+
+production:
+
+  adapter: postgresql
+  encoding: unicode
+  database: seguros_version8_desarrollo
+  pool: 5
+  username:
+  password:

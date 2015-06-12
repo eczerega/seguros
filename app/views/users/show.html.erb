@@ -1,0 +1,88 @@
+<br><br>
+
+
+
+
+
+
+
+
+
+<div class="login-card" style="width: 800px;">
+
+
+
+
+
+  <table class="table">
+
+  <table>
+
+    <tr>
+      <td valign="top" style="padding: 40px;">
+
+        <h2> Perfil de usuario</h2><br>
+        <p>
+          Nombre:
+          <%= @user.name %>
+        </p>
+
+        <p>
+          Apellido
+          <%= @user.last_name %>
+        </p>
+
+        <p>
+          RUT
+          <%= @user.rut %>
+        </p>
+
+        <p>
+          Mail:
+          <%= @user.email %>
+        </p>
+
+        <p>
+          Mail:
+          <%= @user.kind %>
+        </p>
+
+        <p>
+          Activo:
+          <%= @user.active %>
+        </p>
+
+
+
+
+      </td>
+
+      <td style="padding-left: 40px;">
+        <p>
+          <br><br>
+          <% if @user.image.to_s.empty? %>
+
+              <%=  image_tag("perfil.png", :size => '300x500')%>
+
+          <% else %>
+
+
+              <%= image_tag @user.image_url.to_s, :size => '570x500' %>
+
+          <% end %>
+        </p>
+      </td>
+    </tr>
+
+  </table>
+
+  <%= link_to "Descargar PDF de bienvenida", :controller => "users", :action => "download", :userid => @user.id.to_s %>
+
+
+
+</div>
+
+<br><br>
+
+<br><br>
+

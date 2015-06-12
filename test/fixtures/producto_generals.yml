@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filtro1: MyString
+  filtro2: MyString
+  filtro3: MyString
+  filtro4: MyString
+  filtro5: MyString
+  filtro6: MyString
+
+two:
+  filtro1: MyString
+  filtro2: MyString
+  filtro3: MyString
+  filtro4: MyString
+  filtro5: MyString
+  filtro6: MyString

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "SeguroFacil.cl" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+  <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <style type="text/css">
+      .bs-example{
+          margin: 20px;
+      }
+          
+          .caja
+          {
+
+
+          }
+
+          .caja a
+          {
+              color: #ffffff;
+          }
+
+  </style>
+
+
+</head>
+<body>
+
+<div class="container-fluid" style="height: 48px; background: #030507;">
+  <div style="float:left;">  <%= image_tag("LOGO-ORANGE4.png", :size => '190x48')%></div>
+  <div class="caja" style="float:right; margin-right: 20px; padding-top: 10px; color: wheat; ">
+    <span class="fa fa-home"  style="padding-right: 8px;"> </span>
+    <a ><%= link_to "Inicio", index_path %></a>
+    |
+    <% if current_user? %>
+    <a> <span class="fa fa-user" style="padding-right: 8px; padding-left: 8px"> </span> Usuario: <%= current_user.name %> </a>
+    | <a >
+    <span class="glyphicon glyphicon-log-out" style="padding-right: 8px; padding-left: 8px">
+    <%= link_to "Salir", session_path, method: :delete %></a>
+    <% end %>
+
+  </div>
+
+</div>
+
+
+
+<div class="container-fluid"   >
+
+
+  <div class="row"
+  style=
+          "
+            background-image: url('<%= image_path('BACK.png').to_s %>');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+          "
+  >
+
+    <div class="col-sm-2">
+      <%= render 'layouts/navigation' %>
+    </div>
+    <div class="col-sm-10" style="
+            background-color: white;
+    background-image: url('<%= image_path('MAINBACK.png').to_s %>');
+            background-repeat: no-repeat;
+            background-attachment: fixed;">
+
+      <div class="container-fluid"  style="
+              margin-right: -15px;
+              margin-left: -15px;
+              height: 42px;
+                      line-height: 40px;
+                      background: none repeat scroll 0% 0% #EEE;
+                      border: 0px none;
+                      color: #AAA;
+                      box-shadow: none;
+                      border-radius: 0px;
+              font-size: 2ch;
+      " >
+        <span class="fa fa-home" style="padding-right: 8px; padding-left: 8px">
+        <%= request.fullpath %>
+
+      </div>
+
+
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+
+<div id="bajada_menu" >
+
+  <div class="center">
+    <table >
+      <tr>
+        <td class="titulos" width="700px">
+
+          Selecciona el vehículo para asegurar
+
+
+
+        </td>
+
+
+        <td width="300px">
+                    <span id="login" >
+                        <%= image_tag("copia.png", :size => '130x130')%>
+                      </span>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+
+</div>
+<br><br>
+
+<div class="login-card" style="width: 1000px; height: 230px; overflow: auto;
+        overflow-y: hidden;" >
+  <div style="width: 1600px;">
+        <span class="floating">
+          <table class="contorno">
+
+                 <tr>
+                          <tl class="btn_vehiculos">
+                            Vehículos
+                          </tl>
+
+                          <td>
+
+                            <%= image_tag("autos.png", :size => '189x200')%>
+                          </td>
+
+
+                </tr>
+
+          </table>
+
+        </span>
+
+
+        <span class="floating">
+              <select size=5  class="lista" >
+                  <% @vehiculos.each do |user| %>
+                      <option value="<%= user.marca %>"><%= user.tipo %></option>
+
+                  <% end %>
+              </select>
+        </span>
+
+    <span class="floating">
+              <select size=5  class="lista" >
+                <% @vehiculos.each do |user| %>
+                    <option value="<%= user.marca %>"><%= user.marca %></option>
+
+                <% end %>
+              </select>
+        </span>
+
+    <span class="floating">
+              <select size=5  class="lista" >
+                <% @vehiculos.each do |user| %>
+                    <option value="<%= user.marca %>"><%= user.modelo %></option>
+
+                <% end %>
+              </select>
+        </span>
+<span class="floating">
+  <select size=11 class="lista">
+    <option value="2015">2015</option>
+    <option value="2014">2014</option>
+    <option value="2013">2013</option>
+    <option value="2012">2012</option>
+    <option value="2011">2011</option>
+    <option value="2010">2010</option>
+    <option value="2009">2009</option>
+    <option value="2008">2008</option>
+    <option value="2007">2007</option>
+    <option value="2006">2006</option>
+    <option value="2005">2005</option>
+    <option value="-1">Anterior</option>
+  </select>
+</span>
+
+    <span class="floating">
+  <span size=11 class="lista">
+    <%= image_tag("listo.png", :size => '189x130')%>
+  </span>
+</span>
+  </div>
+
+</div>
+

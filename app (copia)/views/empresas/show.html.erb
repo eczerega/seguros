@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @empresa.nombre %>
+</p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @empresa.rut %>
+</p>
+
+<p>
+  <strong>Digito verificador:</strong>
+  <%= @empresa.digito_verificador %>
+</p>
+
+<p>
+  <strong>Giro:</strong>
+  <%= @empresa.giro %>
+</p>
+
+<p>
+  <strong>Domicilio comercial:</strong>
+  <%= @empresa.domicilio_comercial %>
+</p>
+
+<p>
+  <strong>Representante legal:</strong>
+  <%= @empresa.representante_legal %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @empresa.mail %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @empresa.telefono %>
+</p>
+
+<p>
+  <strong>Cuenta bancria:</strong>
+  <%= @empresa.cuenta_bancria %>
+</p>
+
+<p>
+  <strong>Banco:</strong>
+  <%= @empresa.banco %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @empresa.estado %>
+</p>
+
+<%= link_to 'Edit', edit_empresa_path(@empresa) %> |
+<%= link_to 'Back', empresas_path %>

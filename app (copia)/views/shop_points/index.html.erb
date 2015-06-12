@@ -1,0 +1,39 @@
+<h1>Listing shop_points</h1>
+<<<<<<< HEAD
+<table class="table">
+=======
+
+<table>
+>>>>>>> 1d51e0aa66fa4f5417d95a3e7b67ccd1ffa6b891
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>Comuna</th>
+      <th>Rut</th>
+      <th>Street</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shop_points.each do |shop_point| %>
+      <tr>
+        <td><%= shop_point.name %></td>
+        <td><%= shop_point.city %></td>
+        <td><%= shop_point.comuna %></td>
+        <td><%= shop_point.rut %></td>
+        <td><%= shop_point.street %></td>
+        <td><%= shop_point.image %></td>
+        <td><%= link_to 'Show', shop_point %></td>
+        <td><%= link_to 'Edit', edit_shop_point_path(shop_point) %></td>
+        <td><%= link_to 'Destroy', shop_point, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shop point', new_shop_point_path %>

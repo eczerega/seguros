@@ -1,0 +1,11 @@
+rails g scaffold informacion_productos nombre:string tipo:string prima:integer valor_asegurado:integer duracion_meses:integer aseguradora_responsable:string
+
+rails g scaffold producto_tecnologia producto:string tipo_producto:string marca:string anho:integer fecha_inicio:date fecha_termino:date  nombre_comprador:string apellido_comprador:string rut_comprador:string digito_verifiador_comprador:integer email_comprador:string numero_comprador:string nombre_asegurado:string apellido_asegurado:string rut_asegurado digito_verificador_asegurado:integer email_asegurado:string numero_asegurado:string
+
+
+rails g scaffold producto_personas producto:string  nombre_comprador:string apellido_comprador:string rut_comprador:string digito_verifiador_comprador:integer email_comprador:string numero_comprador:string nombre_asegurado:string apellido_asegurado:string rut_asegurado digito_verificador_asegurado:integer email_asegurado:string numero_asegurado:string fecha_inicio:date fecha_termino:date 
+
+rails g scaffold producto_vehiculos producto:string marca:string modelos:string anho:integer motor:string patente:string fecha_inicio:date fecha_termino:date  nombre_comprador:string apellido_comprador:string rut_comprador:string digito_verifiador_comprador:integer email_comprador:string numero_comprador:string nombre_asegurado:string apellido_asegurado:string rut_asegurado digito_verificador_asegurado:integer email_asegurado:string numero_asegurado:string
+
+
+rails g scaffold producto_inmuebles producto:string tipo_vivienda:string construccion:string region:string ciudad:string comuna:string calle:string numero:integer fecha_inicio:date fecha_termino:date nombre_comprador:string apellido_comprador:string rut_comprador:string digito_verificador_comprador:string email_comprador:string numero_comprador:string nombre_asegurado:string apellido_asegurado:string rut_asegurado:string digito_verificador_asegurado:integer email_asegurado:string numero_asegurado:string

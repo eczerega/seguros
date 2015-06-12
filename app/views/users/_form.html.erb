@@ -1,0 +1,74 @@
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+
+
+
+  <h1>Crear usuario</h1><br>
+  <%= form_for(@user) do |f| %>
+      <% if @user.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :Nombre %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :Apellido_paterno %><br>
+        <%= f.text_field :last_name %>
+      </div>
+      <div class="field">
+        <%= f.label :rut %><br>
+        <%= f.text_field :rut %>
+      </div>
+      <div class="field">
+        <%= f.label :Mail %><br>
+        <%= f.text_field :email %>
+      </div>
+
+    <span class="field">
+      <%= f.label :Contraseña %><br>
+      <%= f.password_field :password %>
+  </span>
+      <br>
+
+    <br>
+    <span class="field">
+      <%= f.label :Confirmar_contraseña %><br>
+      <%= f.password_field :password_confirmation %>
+  </span>
+      <div class="field">
+        <%= f.label :Fotocopia_carnet %>
+
+
+          <%= f.file_field :image %>
+
+      </div>
+
+    <div class="field">
+
+      <%= f.label :kind %><br>
+      <%= f.text_field :kind %>
+    </div>
+
+    <div class="field">
+
+      <%= f.label :actve %><br>
+      <%= f.number_field :active %>
+    </div>
+      <div class="actions">
+        <%= f.submit'Crear'  %>
+      </div>
+  <% end %>
+
+

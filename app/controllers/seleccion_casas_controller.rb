@@ -1,0 +1,6 @@
+class SeleccionCasasController < ApplicationController
+
+
+
+
+end

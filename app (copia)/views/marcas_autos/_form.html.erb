@@ -1,0 +1,21 @@
+<%= form_for(@marcas_auto) do |f| %>
+  <% if @marcas_auto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@marcas_auto.errors.count, "error") %> prohibited this marcas_auto from being saved:</h2>
+
+      <ul>
+      <% @marcas_auto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :marca %><br>
+    <%= f.text_field :marca %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
